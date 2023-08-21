@@ -1,16 +1,20 @@
 import "./App.css";
+import Intro from "./components/Intro";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "97.5vh",
+        border: "0",
+      }}
+    >
       <NavBar></NavBar>
-      <div>
-        Hi! <br />
-        I'm Bryan Benchmark Mendoza, <br />
-        an aspring Software Developer
-      </div>
-    </>
+      <Intro></Intro>
+    </div>
   );
 }
 
