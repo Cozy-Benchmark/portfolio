@@ -23,5 +23,15 @@ export default [
             'Chakra UI',
             'Rawg.io API',
         ],
+    }, {
+        id: 'water-refilling-station',
+        name: 'Water Refilling Station Website',
+        descriptions: 'This self-made project is a collaboration with a fellow developer with the intent of creating a webpage for a family water refilling station business. Currently, it is still in development.',
+        toolsUsed : [
+            'Visual Studio Code',
+            'Github',
+            'React',
+            'Typescript',
+        ],
     }
 ]
