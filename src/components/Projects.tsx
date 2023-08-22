@@ -6,13 +6,15 @@ const Projects = () => {
         padding: "20px",
       }}
     >
-      Projects <br /> <br />
-      PLANTEA <br />
-      Plantaea is a mobile application for introducing ethnobotanical plants to
-      the masses which was integrated with GIS mapping, Image Processing, and
-      Gamification. <br /> <br />
-      Cozy Game Hub <br />A web application that shows a variety of games, which
-      allows users to browse their favorite games
+      Projects <br />
+      <ul>
+        <li>PLANTEA</li>
+        Plantaea is a mobile application for introducing ethnobotanical plants
+        to the masses which was integrated with GIS mapping, Image Processing,
+        and Gamification.
+        <li>COZY GAME HUB</li>A web application that shows a variety of games,
+        which allows users to browse their favorite games
+      </ul>
     </div>
   );
 };
