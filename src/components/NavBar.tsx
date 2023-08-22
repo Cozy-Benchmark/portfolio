@@ -14,27 +14,26 @@ const NavBar = () => {
           justifyContent: "space-between",
           position: "fixed",
           top: "0",
-          width: "100%",
+          left: "0",
+          width: "100vw",
           overflow: "hidden",
-          backgroundColor: "#333",
+          padding: "0 20px",
         }}
       >
         <Link to={"/"} style={{ textDecoration: "none" }}>
           Bryan Benchmark Mendoza
         </Link>
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "10%",
-          }}
+          style={{ display: "flex", alignItems: "center", marginRight: "35px" }}
         >
-          <div>
+          <div style={{ marginRight: "20px" }}>
             <Link to={"/projects"} style={{ textDecoration: "none" }}>
               Projects
             </Link>
           </div>
-          <div onClick={toggleModal}>Contacts</div>
+          <div onClick={toggleModal} style={{ cursor: "pointer" }}>
+            Contacts
+          </div>
           <ContactsModal
             isOpen={isModalOpen}
             onClose={toggleModal}
