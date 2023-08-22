@@ -1,6 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
 import contactsData from "../data/contactsData";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface IContactsModal {
   isOpen: boolean;
@@ -15,6 +15,19 @@ const ContactsModal = ({ isOpen, onClose }: IContactsModal) => {
       onClose();
     }
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isOpen]);
+  
   return isOpen ? (
     <>
       <div
