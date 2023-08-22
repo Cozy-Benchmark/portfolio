@@ -33,5 +33,16 @@ export default [
             'React',
             'Typescript',
         ],
+    }, {
+        id: 'topicast',
+        name: 'Topicast: Topic Modelling for Decision-Making Insights from Baguio News Articles',
+        descriptions: 'This project was built by a team with the goal of using a topic modeling model in order to extract decision-making insights from news articles about Baguio City. For the proof of concept, a web application integrated with the model was developed.',
+        toolsUsed: [
+            'Python',
+            'HTML',
+            'CSS',
+            'React',
+            'Falsk'
+        ]
     }
 ]
