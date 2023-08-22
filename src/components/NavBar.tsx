@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <>
@@ -15,8 +17,16 @@ const NavBar = () => {
             width: "15%",
           }}
         >
-          <div>About Me</div>
-          <div>Projects</div>
+          <div>
+            <Link to={"/about"} style={{ textDecoration: "none" }}>
+              About Me
+            </Link>
+          </div>
+          <div>
+            <Link to={"/projects"} style={{ textDecoration: "none" }}>
+              Projects
+            </Link>
+          </div>
           <div>Contacts</div>
         </div>
       </div>
