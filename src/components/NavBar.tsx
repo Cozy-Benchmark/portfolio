@@ -16,14 +16,9 @@ const NavBar = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            width: "15%",
+            width: "10%",
           }}
         >
-          <div>
-            <Link to={"/about"} style={{ textDecoration: "none" }}>
-              About Me
-            </Link>
-          </div>
           <div>
             <Link to={"/projects"} style={{ textDecoration: "none" }}>
               Projects
