@@ -18,6 +18,7 @@ const NavBar = () => {
           width: "100vw",
           overflow: "hidden",
           padding: "0 20px",
+          backgroundColor: "grey",
         }}
       >
         <Link to={"/"} style={{ textDecoration: "none" }}>
