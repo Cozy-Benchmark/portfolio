@@ -1,8 +1,8 @@
-import About from "../components/About"
-import Contacts from "../components/Contacts"
-import Intro from "../components/Intro"
-import NavBar from "../components/NavBar"
-import Projects from "../components/Projects"
+import About from "../components/About";
+import Contacts from "../components/Contacts";
+import Intro from "../components/Intro";
+import NavBar from "../components/NavBar";
+import Projects from "../components/Projects";
 
 const HomePage = () => {
   return (
@@ -12,6 +12,7 @@ const HomePage = () => {
         flexDirection: "column",
         height: "97.5vh",
         border: "0",
+        padding: "0 10px",
       }}
     >
       <NavBar></NavBar>
@@ -37,7 +38,7 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
