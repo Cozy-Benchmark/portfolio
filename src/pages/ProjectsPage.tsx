@@ -7,7 +7,7 @@ const ProjectsPage = () => {
       <h1>Projects</h1>
       <ul>
         <li>
-          <h2>PLANTAEA</h2>
+          <h2 id="plantaea">PLANTAEA</h2>
           <ul>
             <h3>Description</h3>
             <p>
@@ -38,7 +38,7 @@ const ProjectsPage = () => {
           </ul>
         </li>
         <li>
-          <h2>Cozy Game Hub</h2>
+          <h2 id="cozy-game-hub">Cozy Game Hub</h2>
           <ul>
             <h3>Description</h3>
             <p>
