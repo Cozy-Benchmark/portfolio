@@ -3,7 +3,7 @@ import projectsData from "../data/projectsData";
 
 const ProjectsPage = () => {
   return (
-    <>
+    <div style={{ border: "0", padding: "0 10px" }}>
       <NavBar></NavBar>
 
       <h1>Projects</h1>
@@ -27,7 +27,7 @@ const ProjectsPage = () => {
           </ul>
         </>
       ))}
-    </>
+    </div>
   );
 };
 
