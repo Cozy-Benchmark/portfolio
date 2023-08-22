@@ -1,3 +1,5 @@
+import contactsData from "../data/contactsData";
+
 const Contacts = () => {
   return (
     <div
@@ -6,8 +8,12 @@ const Contacts = () => {
         padding: "20px",
       }}
     >
-      Contacts <br /> <br />
-      LinkedIn &#x2022; Email &#x2022; Phone Number
+      Contacts
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        {contactsData.map((x) => (
+          <p>&nbsp; &#x2022; &nbsp; {x.name} </p>
+        ))}
+      </div>
     </div>
   );
 };
