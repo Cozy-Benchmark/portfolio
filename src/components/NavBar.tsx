@@ -9,7 +9,9 @@ const NavBar = () => {
           justifyContent: "space-between",
         }}
       >
-        Bryan Benchmark Mendoza
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          Bryan Benchmark Mendoza
+        </Link>
         <div
           style={{
             display: "flex",

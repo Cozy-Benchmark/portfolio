@@ -1,7 +1,12 @@
+import NavBar from "../components/NavBar";
+
 const ProjectsPage = () => {
   return (
-    <div>ProjectsPage</div>
-  )
-}
+    <>
+      <NavBar></NavBar>
+      <div>ProjectsPage</div>
+    </>
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;
