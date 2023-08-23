@@ -3,7 +3,7 @@ import projectsData from "../data/projectsData";
 
 const ProjectsPage = () => {
   return (
-    <div style={{ border: "0", padding: "0 10px" }}>
+    <div style={{ border: "0", padding: "0 10px", marginTop: "40px" }}>
       <NavBar></NavBar>
 
       <h1>Projects</h1>

@@ -8,12 +8,7 @@ const HomePage = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "97.5vh",
-        border: "0",
-        padding: "0 10px",
-        position: "relative",
+        height: "100vh",
       }}
     >
       <NavBar></NavBar>
@@ -21,19 +16,15 @@ const HomePage = () => {
         style={{
           display: "flex",
           flexDirection: "row",
-          height: "100%",
+          height: "100vh",
+          marginTop: "40px",
+          position: "fixed",
         }}
       >
         <Intro></Intro>
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            height: "95%",
             width: "50%",
-            position: "absolute",
-            top: "35px",
-            right: "0",
           }}
         >
           <About></About>

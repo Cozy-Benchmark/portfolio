@@ -41,6 +41,7 @@ const ContactsModal = ({ isOpen, onClose }: IContactsModal) => {
           justifyContent: "center",
           width: "100vw",
           height: "100vh",
+          zIndex: 1000,
         }}
       >
         <div
@@ -50,7 +51,7 @@ const ContactsModal = ({ isOpen, onClose }: IContactsModal) => {
             right: "0",
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            backgroundColor: "rgba(0, 0, 0, 0.81)",
             cursor: "pointer",
           }}
           ref={overlayRef}

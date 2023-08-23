@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div
       style={{
-        height: "15%",
+        height: '10%',
         padding: "20px",
       }}
     >
