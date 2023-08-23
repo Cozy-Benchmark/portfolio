@@ -96,6 +96,12 @@ body{
   text-decoration: none;
 }
 
+.hashlink-style{
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .home-screen {
   height: 100vh;
 }
@@ -125,4 +131,20 @@ body{
 
 .contacts {
   padding: 1rem;
+}
+
+.intro {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-data {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }

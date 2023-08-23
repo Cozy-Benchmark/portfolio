@@ -2,34 +2,25 @@ import { HashLink } from "react-router-hash-link";
 const Projects = () => {
   return (
     <div className="projects">
-      Projects <br />
+      <h3>Projects </h3>
       <ul>
-        <li>PLANTEA</li>
+        <li>
+          <h4>PLANTEA</h4>
+        </li>
         Plantaea is a mobile application for introducing ethnobotanical plants
         to the masses which was integrated with GIS mapping, Image Processing,
         and Gamification.
         <br />
         <br />
-        <HashLink
-          to="/projects#plantaea"
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
+        <HashLink to="/projects#plantaea" className="hashlink-style">
           View More..
         </HashLink>
-        <li>COZY GAME HUB</li>A web application that shows a variety of games,
-        which allows users to browse their favorite games. <br /> <br />
-        <HashLink
-          to="/projects#cozy-game-hub"
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
+        <li>
+          <h4>COZY GAME HUB</h4>
+        </li>
+        A web application that shows a variety of games, which allows users to
+        browse their favorite games. <br /> <br />
+        <HashLink to="/projects#cozy-game-hub" className="hashlink-style">
           View More..
         </HashLink>
       </ul>

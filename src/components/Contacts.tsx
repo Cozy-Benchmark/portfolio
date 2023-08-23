@@ -2,14 +2,9 @@ import contactsData from "../data/contactsData";
 
 const Contacts = () => {
   return (
-    <div
-      style={{
-        height: "10%",
-        padding: "20px",
-      }}
-    >
-      Contacts
-      <div style={{ display: "flex", flexDirection: "row" }}>
+    <div className="contacts">
+      <h3>Contacts</h3>
+      <div className="contacts-data">
         {contactsData.map((x) => (
           <p>&nbsp; &#x2022; &nbsp; {x.name} </p>
         ))}
