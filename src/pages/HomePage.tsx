@@ -13,6 +13,7 @@ const HomePage = () => {
         height: "97.5vh",
         border: "0",
         padding: "0 10px",
+        position: "relative",
       }}
     >
       <NavBar></NavBar>
@@ -28,8 +29,11 @@ const HomePage = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            height: "100%",
+            height: "95%",
             width: "50%",
+            position: "absolute",
+            top: "35px",
+            right: "0",
           }}
         >
           <About></About>

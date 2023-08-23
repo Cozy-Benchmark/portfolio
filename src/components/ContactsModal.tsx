@@ -18,16 +18,16 @@ const ContactsModal = ({ isOpen, onClose }: IContactsModal) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('modal-open');
+      document.body.classList.add("modal-open");
     } else {
-      document.body.classList.remove('modal-open');
+      document.body.classList.remove("modal-open");
     }
 
     return () => {
-      document.body.classList.remove('modal-open');
+      document.body.classList.remove("modal-open");
     };
   }, [isOpen]);
-  
+
   return isOpen ? (
     <>
       <div
@@ -50,7 +50,7 @@ const ContactsModal = ({ isOpen, onClose }: IContactsModal) => {
             right: "0",
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.81)",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
             cursor: "pointer",
           }}
           ref={overlayRef}

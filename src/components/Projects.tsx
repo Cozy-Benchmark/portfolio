@@ -3,7 +3,7 @@ const Projects = () => {
   return (
     <div
       style={{
-        height: "65%",
+        height: "60%",
         padding: "20px",
       }}
     >
