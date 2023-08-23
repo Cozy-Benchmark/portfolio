@@ -15,21 +15,13 @@ const NavBar = () => {
           position: "fixed",
           top: "0",
           left: "0",
-          width: "100%",
-          height: "40px",
+          width: "100vw",
           overflow: "hidden",
           padding: "0 20px",
           backgroundColor: "grey",
         }}
       >
-        <Link
-          to={"/"}
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
+        <Link to={"/"} style={{ textDecoration: "none" }}>
           Bryan Benchmark Mendoza
         </Link>
         <div
