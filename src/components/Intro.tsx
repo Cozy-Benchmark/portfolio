@@ -3,13 +3,10 @@ const Intro = () => {
     <div
       style={{
         width: "50%",
-        height: "95%",
+        height: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        position: "absolute",
-        top: "35px",
-        left: "0",
       }}
     >
       Hi! <br />

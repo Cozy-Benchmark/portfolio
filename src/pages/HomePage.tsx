@@ -11,9 +11,6 @@ const HomePage = () => {
         display: "flex",
         flexDirection: "column",
         height: "97.5vh",
-        border: "0",
-        padding: "0 10px",
-        position: "relative",
       }}
     >
       <NavBar></NavBar>
@@ -22,6 +19,7 @@ const HomePage = () => {
           display: "flex",
           flexDirection: "row",
           height: "100%",
+          marginTop: "40px",
         }}
       >
         <Intro></Intro>
@@ -29,10 +27,8 @@ const HomePage = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            height: "95%",
+            height: "100%",
             width: "50%",
-            position: "absolute",
-            top: "35px",
             right: "0",
           }}
         >
