@@ -8,46 +8,18 @@ const NavBar = () => {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          position: "fixed",
-          top: "0",
-          left: "0",
-          width: "100vw",
-          height: "40px",
-          overflow: "hidden",
-          padding: "0 20px",
-          backgroundColor: "grey",
-          zIndex: "999",
-        }}
-      >
-        <Link
-          to={"/"}
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
+      <div className="container, navbar-box">
+        <Link to={"/"} className="link-style">
           Bryan Benchmark Mendoza
         </Link>
-        <div
-          style={{ display: "flex", alignItems: "center", marginRight: "35px" }}
-        >
-          <div style={{ marginRight: "20px" }}>
-            <Link to={"/projects"} style={{ textDecoration: "none" }}>
-              Projects
-            </Link>
-          </div>
+        <div className="navbar-options">
+          <Link to={"/projects"} className="link-style">
+            Projects
+          </Link>
           <div onClick={toggleModal} style={{ cursor: "pointer" }}>
             Contacts
           </div>
-          <ContactsModal
-            isOpen={isModalOpen}
-            onClose={toggleModal}
-          ></ContactsModal>
+          <ContactsModal isOpen={isModalOpen} onClose={toggleModal} />
         </div>
       </div>
     </>

@@ -6,21 +6,9 @@ import Projects from "../components/Projects";
 
 const HomePage = () => {
   return (
-    <div
-      style={{
-        height: "100vh",
-      }}
-    >
+    <div className="container, home-screen">
       <NavBar></NavBar>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          height: "100vh",
-          marginTop: "40px",
-          position: "fixed",
-        }}
-      >
+      <div className="main">
         <Intro></Intro>
         <div
           style={{
