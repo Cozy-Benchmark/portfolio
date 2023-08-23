@@ -1,12 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 const Projects = () => {
   return (
-    <div
-      style={{
-        height: "60%",
-        padding: "20px",
-      }}
-    >
+    <div className="projects">
       Projects <br />
       <ul>
         <li>PLANTEA</li>

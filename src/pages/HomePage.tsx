@@ -10,11 +10,7 @@ const HomePage = () => {
       <NavBar></NavBar>
       <div className="main">
         <Intro></Intro>
-        <div
-          style={{
-            width: "50%",
-          }}
-        >
+        <div className="main-right-section">
           <About></About>
           <Projects></Projects>
           <Contacts></Contacts>
