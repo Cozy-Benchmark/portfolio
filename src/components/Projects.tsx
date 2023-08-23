@@ -12,7 +12,13 @@ const Projects = () => {
         and Gamification.
         <br />
         <br />
-        <HashLink to="/projects#plantaea" className="hashlink-style">
+        <HashLink
+          to="/projects#plantaea"
+          scroll={(x) =>
+            x.scrollIntoView({ behavior: "smooth", block: "center" })
+          }
+          className="hashlink-style"
+        >
           View More..
         </HashLink>
         <li>
@@ -20,7 +26,13 @@ const Projects = () => {
         </li>
         A web application that shows a variety of games, which allows users to
         browse their favorite games. <br /> <br />
-        <HashLink to="/projects#cozy-game-hub" className="hashlink-style">
+        <HashLink
+          to="/projects#cozy-game-hub"
+          scroll={(x) =>
+            x.scrollIntoView({ behavior: "smooth", block: "center" })
+          }
+          className="hashlink-style"
+        >
           View More..
         </HashLink>
       </ul>
