@@ -16,6 +16,7 @@ const NavBar = () => {
           top: "0",
           left: "0",
           width: "100vw",
+          height: "40px",
           overflow: "hidden",
           padding: "0 20px",
           backgroundColor: "grey",
