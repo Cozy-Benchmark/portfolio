@@ -148,6 +148,7 @@ body{
 .contacts-data {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   margin: 0;
   border: 0;
   padding: 0;
