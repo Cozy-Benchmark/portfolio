@@ -23,6 +23,16 @@ const ProjectsPage = () => {
                     </ul>
                   ))}
                 </div>
+                <div>
+                  {item.images.map((image, index) => (
+                    <img
+                      style={{ height: "500px", width: "350px" }}
+                      key={index}
+                      src={image}
+                      alt={`${item.name} - Image ${index + 1}`}
+                    ></img>
+                  ))}
+                </div>
               </ul>
             </ul>
           </>

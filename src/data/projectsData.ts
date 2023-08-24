@@ -1,4 +1,14 @@
-export default [
+import {plantaeaImages, topicastImages, cozyGameHubImages} from "./projectsImages";
+
+interface IProjectData {
+    id: string;
+    name: string;
+    descriptions: string;
+    toolsUsed: Array<string>;
+    images: Array<string>;
+}
+
+const projectsData: IProjectData[] = [
     {
         id: 'plantaea',
         name: 'Plantaea',
@@ -9,6 +19,9 @@ export default [
             'Visual Studio Code',
             'Github',
             'React Native',
+        ],
+        images: [
+            ...Object.values(plantaeaImages),
         ],
         
     }, {
@@ -23,6 +36,9 @@ export default [
             'Chakra UI',
             'Rawg.io API',
         ],
+        images: [
+            ...Object.values(cozyGameHubImages)
+        ],
     }, {
         id: 'water-refilling-station',
         name: 'Water Refilling Station Website',
@@ -32,6 +48,9 @@ export default [
             'Github',
             'React',
             'Typescript',
+        ],
+        images: [
+
         ],
     }, {
         id: 'topicast',
@@ -43,6 +62,11 @@ export default [
             'CSS',
             'React',
             'Falsk'
-        ]
+        ],
+        images: [
+            ...Object.values(topicastImages),
+        ],
     }
 ]
+
+export default projectsData;
