@@ -1,12 +1,19 @@
 import {plantaeaImages, topicastImages, cozyGameHubImages} from "./projectsImages";
 
+interface IImage {
+    src: string;
+    width: number;
+    height: number;
+}
+
 interface IProjectData {
     id: string;
     name: string;
     descriptions: string;
     toolsUsed: Array<string>;
-    images: Array<string>;
+    images: Array<IImage>;
 }
+
 
 const projectsData: IProjectData[] = [
     {
@@ -20,10 +27,11 @@ const projectsData: IProjectData[] = [
             'Github',
             'React Native',
         ],
-        images: [
-            ...Object.values(plantaeaImages),
-        ],
-        
+        images: Object.values(plantaeaImages).map((imageDetails) => ({
+            src: imageDetails,
+            width: 200,
+            height: 350,
+        })),
     }, {
         id: 'cozy-game-hub',
         name: 'Cozy Game Hub',
@@ -36,9 +44,11 @@ const projectsData: IProjectData[] = [
             'Chakra UI',
             'Rawg.io API',
         ],
-        images: [
-            ...Object.values(cozyGameHubImages)
-        ],
+        images: Object.values(cozyGameHubImages).map((imageDetails) => ({
+            src: imageDetails,
+            width: 800,
+            height: 400,
+        })),
     }, {
         id: 'water-refilling-station',
         name: 'Water Refilling Station Website',
@@ -63,9 +73,11 @@ const projectsData: IProjectData[] = [
             'React',
             'Falsk'
         ],
-        images: [
-            ...Object.values(topicastImages),
-        ],
+        images: Object.values(topicastImages).map((imageDetails) => ({
+            src: imageDetails,
+            width: 700,
+            height: 400,
+        })),
     }
 ]
 

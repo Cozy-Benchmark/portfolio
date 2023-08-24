@@ -26,9 +26,10 @@ const ProjectsPage = () => {
                 <div>
                   {item.images.map((image, index) => (
                     <img
-                      style={{ height: "500px", width: "350px" }}
                       key={index}
-                      src={image}
+                      src={image.src}
+                      width={image.width}
+                      height={image.height}
                       alt={`${item.name} - Image ${index + 1}`}
                     ></img>
                   ))}
