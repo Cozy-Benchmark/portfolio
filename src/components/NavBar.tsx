@@ -4,11 +4,15 @@ const NavBar = () => {
   return (
     <>
       <div className="container, navbar-box">
-        <Link to={"/"} className="link-style">
+        <Link to={"/"} className="link-style" style={{ color: "#121212" }}>
           Bryan Benchmark Mendoza
         </Link>
         <div className="navbar-options">
-          <Link to={"/projects"} className="link-style">
+          <Link
+            to={"/projects"}
+            className="link-style"
+            style={{ color: "#121212" }}
+          >
             Projects
           </Link>
           <div>Contacts</div>

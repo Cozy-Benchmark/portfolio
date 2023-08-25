@@ -1,24 +1,11 @@
-body::-webkit-scrollbar{
-    display: none;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-body{
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.container {
-  max-width: 2560px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;700&family=Varela+Round&display=swap');
+/* Color
+Text: #fafafa
+Background: #171717
+Primary: #36f336
+Secondary: #121212
+Accent: #797979
+*/
 
 /* 4k */
 @media (max-width: 2560){
@@ -69,6 +56,30 @@ body{
   }
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  max-width: 2560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .navbar-box{
   display: flex;
   justify-content: space-between;
@@ -80,8 +91,9 @@ body{
   height: 40px;
   overflow: hidden;
   padding: 0 20px;
-  background-color: grey;
+  background-color: #36f336;
   z-index: 999;
+  color: #121212;
 }
 
 .navbar-options{
@@ -93,10 +105,12 @@ body{
 }
 
 .link-style{
+  color: #fafafa;
   text-decoration: none;
 }
 
 .hashlink-style{
+  color: #fafafa;
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
@@ -104,10 +118,14 @@ body{
 
 .home-screen {
   height: 100vh;
+  background-color: #171717;
+  color: #fafafa;
 }
 
 .projects-screen {
-  height: 100vh;
+  height: 100%;
+  background-color: #171717;
+  color: #fafafa;
 }
 
 .main{
@@ -123,6 +141,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: #121212;
+
 }
 
 .about {
@@ -143,6 +163,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10%;
 }
 
 .contacts-data {
