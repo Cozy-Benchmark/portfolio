@@ -1,9 +1,8 @@
 const Intro = () => {
   return (
     <div className="intro">
-      Hi! <br />
-      I'm Bryan Benchmark Mendoza, <br />
-      An Aspring Software Developer
+      Bryan Benchmark Mendoza <br />
+      <span className="sub-title">An Aspring Software Developer</span>
     </div>
   );
 };

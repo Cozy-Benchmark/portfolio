@@ -7,11 +7,11 @@ const Projects = () => {
         <li>
           <h4>PLANTEA</h4>
         </li>
-        Plantaea is a mobile application for introducing ethnobotanical plants
-        to the masses which was integrated with GIS mapping, Image Processing,
-        and Gamification.
-        <br />
-        <br />
+        <p>
+          Plantaea is a mobile application for introducing ethnobotanical plants
+          to the masses which was integrated with GIS mapping, Image Processing,
+          and Gamification.
+        </p>
         <HashLink
           to="/projects#plantaea"
           scroll={(x) =>
@@ -24,8 +24,10 @@ const Projects = () => {
         <li>
           <h4>COZY GAME HUB</h4>
         </li>
-        A web application that shows a variety of games, which allows users to
-        browse their favorite games. <br /> <br />
+        <p>
+          A web application that shows a variety of games, which allows users to
+          browse their favorite games.
+        </p>{" "}
         <HashLink
           to="/projects#cozy-game-hub"
           scroll={(x) =>
