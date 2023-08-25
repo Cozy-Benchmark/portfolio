@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link";
+
 const Projects = () => {
   return (
     <div className="projects">
@@ -15,7 +16,7 @@ const Projects = () => {
         <HashLink
           to="/projects#plantaea"
           scroll={(x) =>
-            x.scrollIntoView({ behavior: "smooth", block: "center" })
+            x.scrollIntoView({ behavior: "smooth", block: "start" })
           }
           className="hashlink-style"
         >
@@ -31,7 +32,7 @@ const Projects = () => {
         <HashLink
           to="/projects#cozy-game-hub"
           scroll={(x) =>
-            x.scrollIntoView({ behavior: "smooth", block: "center" })
+            x.scrollIntoView({ behavior: "smooth", block: "start" })
           }
           className="hashlink-style"
         >

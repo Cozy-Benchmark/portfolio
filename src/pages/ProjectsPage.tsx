@@ -6,20 +6,23 @@ const ProjectsPage = () => {
     <div className="container, projects-screen">
       <NavBar></NavBar>
       <div className="project-page">
-        <h1>Projects</h1>
+        <h1 className="project-page-title">Projects</h1>
         {projectsData.map((item) => (
           <>
             <ul>
-              <h2 id={item.id}>{item.name}</h2>
+              <h2 className="project-title" id={item.id}>
+                {item.name}
+              </h2>
               <ul>
                 <div>
-                  <h3>Description:</h3> <p>{item.descriptions}</p>
+                  <h3 className="sub">Description:</h3>{" "}
+                  <p>{item.descriptions}</p>
                 </div>
-                <div>
-                  <h3>Tools Used:</h3>
+                <div className="project-tools">
+                  <h3 className="sub">Tools Used:</h3>
                   {item.toolsUsed.map((x) => (
                     <ul>
-                      <li>{x}</li>
+                      <li className="body-text">{x}</li>
                     </ul>
                   ))}
                 </div>
@@ -31,6 +34,7 @@ const ProjectsPage = () => {
                       width={image.width}
                       height={image.height}
                       alt={`${item.name} - Image ${index + 1}`}
+                      className="project-img"
                     ></img>
                   ))}
                 </div>
