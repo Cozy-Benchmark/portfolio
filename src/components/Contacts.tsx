@@ -5,7 +5,7 @@ const Contacts = () => {
   return (
     <div className="contacts">
       <h3>Contacts</h3>
-      <div className="contacts-data" >
+      <div className="contacts-data">
         {contactsData.map((x) =>
           x.link ? (
             <a
@@ -15,14 +15,14 @@ const Contacts = () => {
               key={x.id}
               className="link-style"
             >
-              <p>
+              <span key={x.id}>
                 &nbsp; {React.createElement(x.icon)} &nbsp; {x.name}
-              </p>
+              </span>
             </a>
           ) : (
-            <p key={x.id}>
+            <span key={x.id} style={{ color: "#36f336" }}>
               &nbsp; {React.createElement(x.icon)} &nbsp; {x.name}
-            </p>
+            </span>
           )
         )}
       </div>

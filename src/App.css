@@ -80,7 +80,12 @@ html, body{
 }
 
 p{
-  font-family: 'Varela Round', sans-serif
+  font-family: 'Varela Round' , sans-serif;
+  color: #797979;
+}
+
+h3{
+  font-size: 25px;
 }
 
 .container {
@@ -105,6 +110,7 @@ p{
   background-color: #36f336;
   z-index: 999;
   color: #121212;
+  font-weight: 700;
 }
 
 .navbar-options{
@@ -116,12 +122,12 @@ p{
 }
 
 .link-style{
-  color: #fafafa;
+  color: #36f336;
   text-decoration: none;
 }
 
 .hashlink-style{
-  color: #fafafa;
+  color: #36f336;
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
@@ -153,18 +159,19 @@ p{
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #121212;
+  padding: 0 10px 0 20px;
 }
 
 .about {
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
 .projects{
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
 .contacts {
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
 .intro {
@@ -176,10 +183,13 @@ p{
   align-items: center;
   border-radius: 10%;
   font-size: xx-large;
+  font-weight: 700;
 }
 
 .sub-title{
   font-family: 'Marvel', sans-serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .contacts-data {
