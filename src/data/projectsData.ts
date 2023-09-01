@@ -59,9 +59,7 @@ const projectsData: IProjectData[] = [
             'React',
             'Typescript',
         ],
-        images: [
-
-        ],
+        images: [],
     }, {
         id: 'topicast',
         name: 'Topicast: Topic Modelling for Decision-Making Insights from Baguio News Articles',

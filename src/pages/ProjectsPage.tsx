@@ -20,6 +20,7 @@ const ProjectsPage = () => {
                   height: "500px",
                   marginTop: "-60px",
                   padding: "0 30px",
+                  position: "relative",
                 }}
               >
                 <div
@@ -46,15 +47,35 @@ const ProjectsPage = () => {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    flexDirection: "column",
                     width: "65%",
                   }}
                 >
-                  {item.images.length > 0 && (
-                    <ImageSlider slides={item.images} />
-                  )}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      paddingTop: "2rem",
+                    }}
+                  >
+                    {item.images.length > 0 && (
+                      <ImageSlider slides={item.images} />
+                    )}
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      position: "absolute",
+                      bottom: "2rem",
+                      right: "4rem",
+                      color: "#36f336",
+                    }}
+                    className="hashlink-style"
+                  >
+                    See Project
+                  </div>
                 </div>
               </div>
             </ul>
