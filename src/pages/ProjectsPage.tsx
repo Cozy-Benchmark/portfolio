@@ -14,8 +14,22 @@ const ProjectsPage = () => {
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <div style={{ display: "flex" }}>
-                <div style={{ width: "35%" }}>
+              <div
+                style={{
+                  display: "flex",
+                  height: "500px",
+                  marginTop: "-60px",
+                  padding: "0 30px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "35%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <div>
                     <h3 className="sub">Description:</h3>{" "}
                     <p>{item.descriptions}</p>
