@@ -18,8 +18,8 @@ const ProjectsPage = () => {
                 style={{
                   display: "flex",
                   height: "500px",
-                  marginTop: "-60px",
-                  padding: "0 30px",
+                  marginTop: "-2rem",
+                  padding: "0 3rem",
                   position: "relative",
                 }}
               >
@@ -64,17 +64,23 @@ const ProjectsPage = () => {
                       <ImageSlider slides={item.images} />
                     )}
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      position: "absolute",
-                      bottom: "2rem",
-                      right: "4rem",
-                      color: "#36f336",
-                    }}
-                    className="hashlink-style"
-                  >
-                    See Project
+                  <div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={item.id}
+                      style={{
+                        display: "flex",
+                        position: "absolute",
+                        bottom: "2rem",
+                        right: "4rem",
+                        color: "#36f336",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <span>See Project</span>
+                    </a>
                   </div>
                 </div>
               </div>

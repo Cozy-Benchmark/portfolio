@@ -12,6 +12,7 @@ interface IProjectData {
     descriptions: string;
     toolsUsed: Array<string>;
     images: Array<IImage>;
+    link: string;
 }
 
 
@@ -32,6 +33,7 @@ const projectsData: IProjectData[] = [
             width: 200,
             height: 350,
         })),
+        link: 'https://github.com/CSC-Odyssey/plantaea.git',
     }, {
         id: 'cozy-game-hub',
         name: 'Cozy Game Hub',
@@ -49,6 +51,7 @@ const projectsData: IProjectData[] = [
             width: 600,
             height: 300,
         })),
+        link: 'https://cozy-game-hub.vercel.app/',
     }, {
         id: 'water-refilling-station',
         name: 'Water Refilling Station Website',
@@ -60,6 +63,7 @@ const projectsData: IProjectData[] = [
             'Typescript',
         ],
         images: [],
+        link: 'https://github.com/Cozy-Benchmark/water-station.git',
     }, {
         id: 'topicast',
         name: 'Topicast: Topic Modelling for Decision-Making Insights from Baguio News Articles',
@@ -76,6 +80,7 @@ const projectsData: IProjectData[] = [
             width: 600,
             height: 300,
         })),
+        link: 'https://github.com/CSC-Odyssey/tourist-spots-analysis.git',
     }
 ]
 
