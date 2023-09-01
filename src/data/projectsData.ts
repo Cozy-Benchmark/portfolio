@@ -46,8 +46,8 @@ const projectsData: IProjectData[] = [
         ],
         images: Object.values(cozyGameHubImages).map((imageDetails) => ({
             src: imageDetails,
-            width: 800,
-            height: 400,
+            width: 600,
+            height: 300,
         })),
     }, {
         id: 'water-refilling-station',
@@ -75,8 +75,8 @@ const projectsData: IProjectData[] = [
         ],
         images: Object.values(topicastImages).map((imageDetails) => ({
             src: imageDetails,
-            width: 700,
-            height: 400,
+            width: 600,
+            height: 300,
         })),
     }
 ]
