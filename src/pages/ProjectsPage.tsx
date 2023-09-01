@@ -1,3 +1,4 @@
+import ImageSlider from "../components/ImageSlider";
 import NavBar from "../components/NavBar";
 import projectsData from "../data/projectsData";
 
@@ -13,32 +14,35 @@ const ProjectsPage = () => {
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <ul>
-                <div>
-                  <h3 className="sub">Description:</h3>{" "}
-                  <p>{item.descriptions}</p>
+              <div style={{ display: "flex" }}>
+                <div style={{ width: "35%" }}>
+                  <div>
+                    <h3 className="sub">Description:</h3>{" "}
+                    <p>{item.descriptions}</p>
+                  </div>
+                  <div className="project-tools">
+                    <h3 className="sub">Tools Used:</h3>
+                    {item.toolsUsed.map((x) => (
+                      <ul>
+                        <li className="body-text">{x}</li>
+                      </ul>
+                    ))}
+                  </div>
                 </div>
-                <div className="project-tools">
-                  <h3 className="sub">Tools Used:</h3>
-                  {item.toolsUsed.map((x) => (
-                    <ul>
-                      <li className="body-text">{x}</li>
-                    </ul>
-                  ))}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "65%",
+                  }}
+                >
+                  {item.images.length > 0 && (
+                    <ImageSlider slides={item.images} />
+                  )}
                 </div>
-                <div>
-                  {item.images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image.src}
-                      width={image.width}
-                      height={image.height}
-                      alt={`${item.name} - Image ${index + 1}`}
-                      className="project-img"
-                    ></img>
-                  ))}
-                </div>
-              </ul>
+              </div>
             </ul>
           </>
         ))}
