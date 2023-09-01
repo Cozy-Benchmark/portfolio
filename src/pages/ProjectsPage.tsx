@@ -18,8 +18,7 @@ const ProjectsPage = () => {
                 style={{
                   display: "flex",
                   height: "500px",
-                  marginTop: "-2rem",
-                  padding: "0 3rem",
+                  padding: "0 2rem",
                   position: "relative",
                 }}
               >
@@ -28,7 +27,6 @@ const ProjectsPage = () => {
                     width: "35%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
                   }}
                 >
                   <div>

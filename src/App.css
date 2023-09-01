@@ -235,4 +235,10 @@ h3{
 
 .project-title{
   scroll-margin-top: 4rem;
+  font-size: 45px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
