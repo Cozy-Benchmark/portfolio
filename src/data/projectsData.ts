@@ -15,7 +15,6 @@ interface IProjectData {
     link: string;
 }
 
-
 const projectsData: IProjectData[] = [
     {
         id: 'plantaea',

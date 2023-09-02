@@ -238,3 +238,7 @@ h3{
   font-size: 45px;
   margin-bottom: 0;
 }
+
+.gr-icon path {
+  stroke: rgb(54, 243, 54);
+}

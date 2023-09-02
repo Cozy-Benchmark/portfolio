@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaLessThan, FaGreaterThan } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface ISlide {
   slides: Array<{
@@ -26,9 +27,11 @@ const ImageSlider = ({ slides }: ISlide) => {
 
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      <div onClick={goToPreviousSlide}>
-        <FaLessThan />
-      </div>
+      <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
+        <div onClick={goToPreviousSlide}>
+          <IoIosArrowBack />
+        </div>
+      </IconContext.Provider>
       <div>
         <img
           key={currentIndex}
@@ -40,9 +43,11 @@ const ImageSlider = ({ slides }: ISlide) => {
           style={{ borderRadius: "10px", border: "1px solid #797979" }}
         />
       </div>
-      <div onClick={goToNextSlide}>
-        <FaGreaterThan />
-      </div>
+      <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
+        <div onClick={goToNextSlide}>
+          <IoIosArrowForward />
+        </div>
+      </IconContext.Provider>
     </div>
   );
 };
