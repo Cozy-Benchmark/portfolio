@@ -37,6 +37,7 @@ const ImageSlider = ({ slides }: ISlide) => {
           height={slides[currentIndex].height}
           alt={`Image ${currentIndex + 1}`}
           className="project-img"
+          style={{ borderRadius: "10px", border: "1px solid #797979" }}
         />
       </div>
       <div onClick={goToNextSlide}>

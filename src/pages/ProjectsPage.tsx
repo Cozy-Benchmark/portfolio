@@ -9,7 +9,14 @@ const ProjectsPage = () => {
       <div className="project-page">
         <h1 className="project-page-title">Projects</h1>
         {projectsData.map((item) => (
-          <>
+          <div
+            style={{
+              border: "1px solid #797979",
+              borderRadius: "20px",
+              marginBottom: "20px",
+              backgroundColor: "#121212",
+            }}
+          >
             <ul>
               <h2 className="project-title" id={item.id}>
                 {item.name}
@@ -17,7 +24,7 @@ const ProjectsPage = () => {
               <div
                 style={{
                   display: "flex",
-                  height: "500px",
+                  height: "63vh",
                   padding: "0 2rem",
                   position: "relative",
                 }}
@@ -44,8 +51,6 @@ const ProjectsPage = () => {
                 </div>
                 <div
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
                     width: "65%",
                   }}
                 >
@@ -55,35 +60,31 @@ const ProjectsPage = () => {
                       flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "center",
-                      paddingTop: "2rem",
                     }}
                   >
                     {item.images.length > 0 && (
                       <ImageSlider slides={item.images} />
                     )}
                   </div>
-                  <div>
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key={item.id}
-                      style={{
-                        display: "flex",
-                        position: "absolute",
-                        bottom: "2rem",
-                        right: "4rem",
-                        color: "#36f336",
-                        textDecoration: "none",
-                      }}
-                    >
-                      <span>See Project</span>
-                    </a>
-                  </div>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={item.id}
+                    style={{
+                      position: "absolute",
+                      bottom: " 2rem",
+                      right: "4rem",
+                      color: "#36f336",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span>See Project</span>
+                  </a>
                 </div>
               </div>
             </ul>
-          </>
+          </div>
         ))}
       </div>
     </div>
