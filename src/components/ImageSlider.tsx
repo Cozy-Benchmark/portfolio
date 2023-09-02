@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { BsCircleFill } from "react-icons/bs";
 
 interface ISlide {
   slides: Array<{
@@ -31,27 +30,9 @@ const ImageSlider = ({ slides }: ISlide) => {
     setCurrentIndex(slideIndex);
   };
 
-  useEffect(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-
-    timerRef.current = window.setTimeout(() => {
-      goToNextSlide();
-    }, 3000);
-
-    return () => {
-      clearTimeout(timerRef.current);
-    };
-  });
-
   return (
     <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
@@ -59,12 +40,7 @@ const ImageSlider = ({ slides }: ISlide) => {
             <IoIosArrowBack />
           </div>
         </IconContext.Provider>
-        <div
-          style={{
-            transform: "translateX(-${currentIndex * 100}%)",
-            transition: "transform 0.5 ease",
-          }}
-        >
+        <div>
           <img
             key={currentIndex}
             src={slides[currentIndex].src}
@@ -87,7 +63,7 @@ const ImageSlider = ({ slides }: ISlide) => {
           justifyContent: "center",
         }}
       >
-        {slides.map((_slide, slideIndex) => (
+        {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
