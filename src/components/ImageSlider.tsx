@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BsCircleFill } from "react-icons/bs";
@@ -12,6 +12,7 @@ interface ISlide {
 }
 
 const ImageSlider = ({ slides }: ISlide) => {
+  const timerRef = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPreviousSlide = () => {
@@ -29,6 +30,15 @@ const ImageSlider = ({ slides }: ISlide) => {
   const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
+
+  useEffect(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = window.setTimeout(() => {
+      goToNextSlide();
+    }, 3000);
+  });
 
   return (
     <div
