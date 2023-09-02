@@ -63,9 +63,9 @@ const ImageSlider = ({ slides }: ISlide) => {
           justifyContent: "center",
         }}
       >
-        {slides.map((slide, slideIndex) => (
+        {slides.map((_slide, slideIndex) => (
           <div
-            key={slideIndex}
+            key={slideIndex}  
             onClick={() => goToSlide(slideIndex)}
             style={{ margin: "0 3px", cursor: "pointer" }}
           >

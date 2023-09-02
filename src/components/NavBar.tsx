@@ -15,7 +15,6 @@ const NavBar = () => {
           >
             Projects
           </Link>
-          <div>Contacts</div>
         </div>
       </div>
     </>
