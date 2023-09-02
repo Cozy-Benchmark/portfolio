@@ -35,14 +35,23 @@ const ImageSlider = ({ slides }: ISlide) => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
+
     timerRef.current = window.setTimeout(() => {
       goToNextSlide();
     }, 3000);
+
+    return () => {
+      clearTimeout(timerRef.current);
+    };
   });
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
@@ -50,7 +59,12 @@ const ImageSlider = ({ slides }: ISlide) => {
             <IoIosArrowBack />
           </div>
         </IconContext.Provider>
-        <div>
+        <div
+          style={{
+            transform: "translateX(-${currentIndex * 100}%)",
+            transition: "transform 0.5 ease",
+          }}
+        >
           <img
             key={currentIndex}
             src={slides[currentIndex].src}
@@ -73,7 +87,7 @@ const ImageSlider = ({ slides }: ISlide) => {
           justifyContent: "center",
         }}
       >
-        {slides.map((slide, slideIndex) => (
+        {slides.map((_slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
