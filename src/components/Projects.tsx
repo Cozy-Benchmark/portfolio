@@ -1,26 +1,24 @@
-import NavBar from "./NavBar";
 import projectsData from "../data/projectsData";
 import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
   return (
-    <div className="container, projects-screen">
-      <NavBar></NavBar>
-      <div className="projects">
-        <h1 className="project-page-title">Projects</h1>
+    <div className="projects">
+      <div className="projects-details">
+        <h1 style={{textAlign: 'center', color: '#36f336'}}>Projects</h1>
         {projectsData.map((item) => (
           <div className="project-container">
             <ul>
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <div className="project-details">
+              <div className="a-project-details">
                 <div className="project-details-left">
                   <div className="description-container">
                     <h3 className="sub">Description:</h3>{" "}
                     <p>{item.descriptions}</p>
                   </div>
-                  <div className="project-tools">
+                  <div>
                     <h3 className="sub">Tools Used:</h3>
                     {item.toolsUsed.map((x) => (
                       <ul>

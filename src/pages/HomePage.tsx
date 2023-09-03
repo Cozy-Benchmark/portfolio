@@ -7,14 +7,20 @@ import Projects from "../components/Projects";
 const HomePage = () => {
   return (
     <div className="container, home-screen">
-      <NavBar></NavBar>
+      <div id='intro'>
+        <NavBar></NavBar>
+      </div>
       <div className="home-screen-main">
         <Intro></Intro>
-        <About></About>
-        <div id="projects">
+        <div id="about" className="scroll-margin">
+          <About></About>
+        </div>
+        <div id="projects" className="scroll-margin">
           <Projects></Projects>
         </div>
-        <Contacts></Contacts>
+        <div id="contacts" className="scroll-margin">
+          <Contacts></Contacts>
+        </div>
       </div>
     </div>
   );

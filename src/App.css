@@ -45,6 +45,7 @@ html, body{
   border: 0;
   height: 100%;
   font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
 }
 
 p{
@@ -76,6 +77,10 @@ h3{
   align-items: center;
 }
 
+.scroll-margin {
+  scroll-margin-top: 2.5rem;
+}
+
 /* NAVBAR */
 
 .navbar-box{
@@ -98,7 +103,7 @@ h3{
 .navbar-options{
   display: flex;
   margin-right: 35px;
-  width: 150px;
+  width: 200px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -148,24 +153,13 @@ h3{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid #36f336;
 }
 
 .about-details {
   text-align: left;
   width: 400px;
-  border: 1px solid #36f336;
 }
 
-.projects{
-  padding: 0rem 1rem;
-  width: 100vw;
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
 
 .contacts {
   padding: 0rem 1rem;
@@ -205,44 +199,32 @@ h3{
   padding: 0;
 }
 
-/* PROJECT SCREEN */
-.projects {
+.projects{
+  padding: 0rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 2.5rem;
+}
+
+.projects-details{
+  width: 1000px;
   height: 100%;
   background-color: #171717;
   color: #fafafa;
-  padding: 20px;
-}
-
-.project-page{
-  border: 0;
-  padding: 0 10px;
-  margin-top: 40px;
-}
-
-.project-page-title {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: #36f336;
+  text-align: left;
 }
 
 .project-container {
-  border: 1px solid #797979;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  background-color: #121212;
+  width: 1000px;
+  height: 100%;
 }
 
-.project-title{
-  scroll-margin-top: 7.4rem;
-  font-size: 45px;
-  margin-bottom: 0;
-}
-
-.project-details {
+.a-project-details {
   display: flex;
   height: 63vh;
-  padding: 0 2rem;
   position: relative;
 }
 
@@ -250,9 +232,6 @@ h3{
   width: 35%;
   display: flex;
   flex-direction: column;
-}
-.project-tools{
-  margin-bottom: 10px;
 }
 
 .project-details-right {
@@ -365,7 +344,7 @@ h3{
   }
 
   /* Project Screen */
-  .projects-screen{
+  .projects{
     width: 100vw;
     padding: 0;
     overflow-x: hidden;

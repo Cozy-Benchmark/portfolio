@@ -47,8 +47,8 @@ const projectsData: IProjectData[] = [
         ],
         images: Object.values(cozyGameHubImages).map((imageDetails) => ({
             src: imageDetails,
-            width: 600,
-            height: 300,
+            width: 500,
+            height: 250,
         })),
         link: 'https://cozy-game-hub.vercel.app/',
     }, {
@@ -76,8 +76,8 @@ const projectsData: IProjectData[] = [
         ],
         images: Object.values(topicastImages).map((imageDetails) => ({
             src: imageDetails,
-            width: 600,
-            height: 300,
+            width: 500,
+            height: 250,
         })),
         link: 'https://github.com/CSC-Odyssey/tourist-spots-analysis.git',
     }
