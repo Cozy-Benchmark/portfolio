@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="container, home-screen">
       <NavBar></NavBar>
-      <div className="main">
+      <div className="home-screen-main">
         <Intro></Intro>
         <div className="main-right-section">
           <About></About>

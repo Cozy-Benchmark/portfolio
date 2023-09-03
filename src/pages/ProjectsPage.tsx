@@ -16,7 +16,7 @@ const ProjectsPage = () => {
               </h2>
               <div className="project-details">
                 <div className="project-details-left">
-                  <div>
+                  <div className="description-container">
                     <h3 className="sub">Description:</h3>{" "}
                     <p>{item.descriptions}</p>
                   </div>
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
                   </div>
                 </div>
                 <div className="project-details-right">
-                  <div style={{}}>
+                  <div className="project-img-container">
                     {item.images.length > 0 && (
                       <ImageSlider slides={item.images} />
                     )}
