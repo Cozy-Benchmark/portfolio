@@ -31,10 +31,8 @@ const ImageSlider = ({ slides }: ISlide) => {
   };
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <div style={{ display: "flex", alignItems: "center" }}>
+    <div className="center-column">
+      <div className="center-row">
         <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
           <div onClick={goToPreviousSlide}>
             <IoIosArrowBack />
@@ -47,8 +45,7 @@ const ImageSlider = ({ slides }: ISlide) => {
             width={slides[currentIndex].width}
             height={slides[currentIndex].height}
             alt={`Image ${currentIndex + 1}`}
-            className="project-img"
-            style={{ borderRadius: "10px", border: "1px solid #797979" }}
+            className="project-img img-border"
           />
         </div>
         <IconContext.Provider value={{ color: "#36f336", size: "30px" }}>
@@ -57,17 +54,12 @@ const ImageSlider = ({ slides }: ISlide) => {
           </div>
         </IconContext.Provider>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <div className="center-row">
         {slides.map((_slide, slideIndex) => (
           <div
-            key={slideIndex}  
+            key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            style={{ margin: "0 3px", cursor: "pointer" }}
+            className="dot"
           >
             <IconContext.Provider value={{ color: "#36f336", size: "8px" }}>
               <BsCircleFill />

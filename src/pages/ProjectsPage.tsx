@@ -9,33 +9,13 @@ const ProjectsPage = () => {
       <div className="project-page">
         <h1 className="project-page-title">Projects</h1>
         {projectsData.map((item) => (
-          <div
-            style={{
-              border: "1px solid #797979",
-              borderRadius: "20px",
-              marginBottom: "20px",
-              backgroundColor: "#121212",
-            }}
-          >
+          <div className="project-container">
             <ul>
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <div
-                style={{
-                  display: "flex",
-                  height: "63vh",
-                  padding: "0 2rem",
-                  position: "relative",
-                }}
-              >
-                <div
-                  style={{
-                    width: "35%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
+              <div className="project-details">
+                <div className="project-details-left">
                   <div>
                     <h3 className="sub">Description:</h3>{" "}
                     <p>{item.descriptions}</p>
@@ -49,19 +29,8 @@ const ProjectsPage = () => {
                     ))}
                   </div>
                 </div>
-                <div
-                  style={{
-                    width: "65%",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
+                <div className="project-details-right">
+                  <div style={{}}>
                     {item.images.length > 0 && (
                       <ImageSlider slides={item.images} />
                     )}
@@ -71,13 +40,7 @@ const ProjectsPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={item.id}
-                    style={{
-                      position: "absolute",
-                      bottom: " 2rem",
-                      right: "4rem",
-                      color: "#36f336",
-                      textDecoration: "none",
-                    }}
+                    className="see-project-link"
                   >
                     <span>See Project</span>
                   </a>
