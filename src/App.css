@@ -127,47 +127,63 @@ h3{
 
 /* HOME SCREEN */
 .home-screen {
-  height: 100vh;
+  height: 100%;
   background-color: #171717;
   color: #fafafa;
+  overflow-x: hidden;
 }
-
 
 .home-screen-main{
   display: flex;
-  flex-direction: row;
-  height: 95vh;
-  margin-top: 40px;
-  position: fixed;
-}
-
-.main-right-section{
-  width: 50%;
-  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #121212;
+  height: 100%;
+  margin-top: 40px;
 }
 
 .about {
   padding: 0rem 1rem;
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #36f336;
+}
+
+.about-details {
+  text-align: left;
+  width: 400px;
+  border: 1px solid #36f336;
 }
 
 .projects{
   padding: 0rem 1rem;
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .contacts {
   padding: 0rem 1rem;
-}
-
-.intro {
-  width: 50%;
-  height: 100%;
+  width: 100vw;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+.intro {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   font-size: xx-large;
   font-weight: 700;
@@ -177,6 +193,7 @@ h3{
   font-family: 'Marvel', sans-serif;
   font-style: italic;
   font-weight: 400;
+  color: #36f336;
 }
 
 .contacts-data {
@@ -189,7 +206,7 @@ h3{
 }
 
 /* PROJECT SCREEN */
-.projects-screen {
+.projects {
   height: 100%;
   background-color: #171717;
   color: #fafafa;

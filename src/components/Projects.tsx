@@ -1,44 +1,55 @@
-import { HashLink } from "react-router-hash-link";
+import NavBar from "./NavBar";
+import projectsData from "../data/projectsData";
+import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
   return (
-    <div className="projects">
-      <h3>Projects </h3>
-      <ul>
-        <li>
-          <h4>PLANTEA</h4>
-        </li>
-        <p>
-          Plantaea is a mobile application for introducing ethnobotanical plants
-          to the masses which was integrated with GIS mapping, Image Processing,
-          and Gamification.
-        </p>
-        <HashLink
-          to="/projects#plantaea"
-          scroll={(x) =>
-            x.scrollIntoView({ behavior: "smooth", block: "start" })
-          }
-          className="hashlink-style"
-        >
-          View More..
-        </HashLink>
-        <li>
-          <h4>COZY GAME HUB</h4>
-        </li>
-        <p>
-          A web application that shows a variety of games, which allows users to
-          browse their favorite games.
-        </p>{" "}
-        <HashLink
-          to="/projects#cozy-game-hub"
-          scroll={(x) =>
-            x.scrollIntoView({ behavior: "smooth", block: "start" })
-          }
-          className="hashlink-style"
-        >
-          View More..
-        </HashLink>
-      </ul>
+    <div className="container, projects-screen">
+      <NavBar></NavBar>
+      <div className="projects">
+        <h1 className="project-page-title">Projects</h1>
+        {projectsData.map((item) => (
+          <div className="project-container">
+            <ul>
+              <h2 className="project-title" id={item.id}>
+                {item.name}
+              </h2>
+              <div className="project-details">
+                <div className="project-details-left">
+                  <div className="description-container">
+                    <h3 className="sub">Description:</h3>{" "}
+                    <p>{item.descriptions}</p>
+                  </div>
+                  <div className="project-tools">
+                    <h3 className="sub">Tools Used:</h3>
+                    {item.toolsUsed.map((x) => (
+                      <ul>
+                        <li className="body-text">{x}</li>
+                      </ul>
+                    ))}
+                  </div>
+                </div>
+                <div className="project-details-right">
+                  <div className="project-img-container">
+                    {item.images.length > 0 && (
+                      <ImageSlider slides={item.images} />
+                    )}
+                  </div>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={item.id}
+                    className="see-project-link"
+                  >
+                    <span>See Project</span>
+                  </a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

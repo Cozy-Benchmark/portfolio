@@ -10,11 +10,11 @@ const HomePage = () => {
       <NavBar></NavBar>
       <div className="home-screen-main">
         <Intro></Intro>
-        <div className="main-right-section">
-          <About></About>
+        <About></About>
+        <div id="projects">
           <Projects></Projects>
-          <Contacts></Contacts>
         </div>
+        <Contacts></Contacts>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   return (
@@ -8,13 +9,13 @@ const NavBar = () => {
           Bryan Benchmark Mendoza
         </Link>
         <div className="navbar-options">
-          <Link
-            to={"/projects"}
+          <HashLink
+            to={"/#projects"}
             className="link-style"
             style={{ color: "#121212" }}
           >
             Projects
-          </Link>
+          </HashLink>
         </div>
       </div>
     </>
