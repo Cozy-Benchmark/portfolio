@@ -52,18 +52,6 @@ const projectsData: IProjectData[] = [
         })),
         link: 'https://cozy-game-hub.vercel.app/',
     }, {
-        id: 'water-refilling-station',
-        name: 'Water Refilling Station Website',
-        descriptions: 'This self-made project is a collaboration with a fellow developer with the intent of creating a webpage for a family water refilling station business. Currently, it is still in development.',
-        toolsUsed : [
-            'Visual Studio Code',
-            'Github',
-            'React',
-            'Typescript',
-        ],
-        images: [],
-        link: 'https://github.com/Cozy-Benchmark/water-station.git',
-    }, {
         id: 'topicast',
         name: 'Topicast',
         descriptions: 'This project was built by a team with the goal of using a topic modeling model in order to extract decision-making insights from news articles about Baguio City. For the proof of concept, a web application integrated with the model was developed.',
