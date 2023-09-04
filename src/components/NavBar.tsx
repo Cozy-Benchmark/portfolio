@@ -3,34 +3,18 @@ import { HashLink } from "react-router-hash-link";
 const NavBar = () => {
   return (
     <>
-      <div className="container, navbar-box">
-        <HashLink
-          to={"/#intro"}
-          className="link-style"
-          style={{ color: "#121212" }}
-        >
+      <div className="container navbar-box">
+        <HashLink to={"/#intro"} className="secondary-color link-style">
           Bryan Benchmark Mendoza
         </HashLink>
         <div className="navbar-options">
-          <HashLink
-            to={"/#about"}
-            className="link-style"
-            style={{ color: "#121212" }}
-          >
+          <HashLink to={"/#about"} className="secondary-color link-style">
             About
           </HashLink>
-          <HashLink
-            to={"/#projects"}
-            className="link-style"
-            style={{ color: "#121212" }}
-          >
+          <HashLink to={"/#projects"} className="secondary-color link-style">
             Projects
           </HashLink>
-          <HashLink
-            to={"/#contacts"}
-            className="link-style"
-            style={{ color: "#121212" }}
-          >
+          <HashLink to={"/#contacts"} className="secondary-color link-style">
             Contacts
           </HashLink>
         </div>

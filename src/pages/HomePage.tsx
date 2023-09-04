@@ -6,7 +6,7 @@ import Projects from "../components/Projects";
 
 const HomePage = () => {
   return (
-    <div className="container, home-screen">
+    <div className="container home-screen">
       <div id='intro'>
         <NavBar></NavBar>
       </div>

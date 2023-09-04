@@ -29,6 +29,26 @@ Accent: #797979
   color: #797979;
 }
 
+.text-color{
+  color: #fafafa;
+}
+
+.background-color{
+  color: #171717;
+}
+
+.primary-color {
+  color: #36f336;
+}
+
+.secondary-color {
+  color: #121212;
+}
+
+.accent-color {
+  color: #797979;
+}
+
 /* GENERAL */
 
 body::-webkit-scrollbar{
@@ -111,7 +131,6 @@ h3{
 /* LINK STYLES */
 
 .link-style{
-  color: #36f336;
   text-decoration: none;
 }
 
@@ -165,7 +184,15 @@ h3{
 .about-details {
   text-align: left;
   width: 400px;
+}
 
+.about-text{
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.about-img{
+  border-radius: 20px;
 }
 
 .contacts {

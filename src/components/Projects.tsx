@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="projects-details">
-        <h1 style={{textAlign: 'center', color: '#36f336'}}>Projects</h1>
+        <h1 className='primary-color' style={{textAlign: 'center'}}>Projects</h1>
         {projectsData.map((item, index) => (
           // <div className={`project-container ${index % 2 === 0 ? 'even' : 'odd'}`}>
           <div className="project-container">
