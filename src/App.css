@@ -228,6 +228,14 @@ h3{
   position: relative;
 }
 
+.a-project-details.odd{
+  flex-direction: row-reverse;
+}
+
+.a-project-details.even{
+  flex-direction: row;
+}
+
 .project-details-left {
   width: 35%;
   display: flex;

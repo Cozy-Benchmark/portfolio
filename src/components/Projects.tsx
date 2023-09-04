@@ -6,13 +6,14 @@ const Projects = () => {
     <div className="projects">
       <div className="projects-details">
         <h1 style={{textAlign: 'center', color: '#36f336'}}>Projects</h1>
-        {projectsData.map((item) => (
+        {projectsData.map((item, index) => (
+          // <div className={`project-container ${index % 2 === 0 ? 'even' : 'odd'}`}>
           <div className="project-container">
             <ul>
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <div className="a-project-details">
+              <div className={`a-project-details ${index % 2 === 0 ? 'even' : 'odd'}`}>
                 <div className="project-details-left">
                   <div className="description-container">
                     <h3 className="sub">Description:</h3>{" "}
