@@ -50,11 +50,11 @@ const Projects = () => {
       <div className="projects-details">
         <h1
           ref={titleRef}
-          className={`primary-color projects-title ${
+          className={`main primary-color projects-title ${
             titleVisibility ? "animate" : ""
           }`}
         >
-          Projects
+          PROJECTS
         </h1>
         {projectsData.map((item, index) => (
           <div

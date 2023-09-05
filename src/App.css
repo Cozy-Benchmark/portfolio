@@ -33,6 +33,17 @@
     }
 }
 
+@keyframes fade-down {
+  /* from */
+  10% { 
+    transform: translateX(-30px) scale(0.8); 
+  }
+  /* to */
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
 @keyframes fade-in {
   /* from */
   10% { 
@@ -302,6 +313,19 @@ h3{
   justify-content: space-evenly;
 }
 
+.contacts-icon {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-icon:hover{
+  opacity: 0.7;
+  color: #36f336;
+
+}
+
 .projects{
   height: 100%;
   display: flex;
@@ -316,7 +340,7 @@ h3{
 }
 
 .projects-title.animate{
-  animation: slideinright 1s forwards ease}
+  animation: fade-down 1s forwards ease}
 
 .projects-details{
   width: 1000px;

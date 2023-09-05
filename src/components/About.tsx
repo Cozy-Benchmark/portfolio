@@ -26,8 +26,8 @@ const About = () => {
           ref={detailRef}
           className={`about-details ${detailElementVisible ? "animate" : ""}`}
         >
-          <h1 className="primary-color">About</h1>
-          <p className="about-text">
+          <h1 className="primary-color main">ABOUT</h1>
+          <p className="about-text body-text">
             I’m a fresh BSCS Graduate from Baguio City, Philippines, and an
             aspiring full-stack software developer. I enjoy building
             applications from start to finish. Still learning and growing, and
