@@ -230,7 +230,6 @@ h3{
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly
-
 }
 
 .about-details {
@@ -252,19 +251,10 @@ h3{
 }
 
 .about-img.animate{
-  animation: fade-in 4s;
+  animation: fade-in 2s;
   transition: all 5s;
 }
 
-.contacts {
-  width: 100vw;
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0rem 1rem;
-}
 
 .intro {
   width: 100vw;
@@ -279,7 +269,7 @@ h3{
 
 .intro.animate {
   animation: fade-up 0.5s;
-
+  
 }
 
 .sub-title{
@@ -289,13 +279,27 @@ h3{
   color: #36f336;
 }
 
+.contacts-container {
+  width: 100vw;
+  height: 95dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
 .contacts-data {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 0;
-  border: 0;
-  padding: 0;
 }
 
 .projects{

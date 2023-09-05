@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
+import { AiOutlineLinkedin, AiOutlineMail, AiOutlinePhone, AiOutlineGithub} from 'react-icons/ai';
 
 interface ContactItem {
   id: number;
@@ -17,15 +17,22 @@ const contactsData: ContactItem[] = [
   },
   {
     id: 2,
-    name: 'bryanbenchmarkmendoza@gmail.com',
-    link: '',
-    icon: AiOutlineMail,
+    name: 'Github',
+    link: 'https://github.com/Cozy-Benchmark',
+    icon: AiOutlineGithub,
+
   },
   {
     id: 3,
     name: '09998017946',
     link: '',
     icon: AiOutlinePhone,
+  },
+  {
+    id: 4,
+    name: 'bryanbenchmarkmendoza@gmail.com',
+    link: '',
+    icon: AiOutlineMail,
   }
 ];
 
