@@ -3,7 +3,7 @@
 @keyframes slideinleft{
   /* from */
   0% { 
-    transform: translateX(-100%);
+    transform: translateX(-15%);
   }
   /* to */
   100% {
@@ -14,7 +14,7 @@
 @keyframes slideinright{
   /* from */
   0% { 
-    transform: translateX(100%);
+    transform: translateX(15%);
   }
   /* to */
   100% {
@@ -282,15 +282,15 @@ h3{
 .project-container {
   width: 1000px;
   height: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .project-container.odd.animate{
-  animation: slideinleft 1.5s forwards ease;
+  animation: slideinleft 1s forwards ease;
 }
 
 .project-container.even.animate{
-  animation: slideinright 1.5s forwards ease;
+  animation: slideinright 1s forwards ease;
 }
 
 .project-title{
