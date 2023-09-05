@@ -275,7 +275,11 @@ h3{
   text-align: center;
   font-size: xx-large;
   font-weight: 700;
+}
+
+.intro.animate {
   animation: fade-up 0.5s;
+
 }
 
 .sub-title{
