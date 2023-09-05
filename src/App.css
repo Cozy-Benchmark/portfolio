@@ -22,6 +22,28 @@
   }
 }
 
+@keyframes fade-up {
+    /* from */
+    0% { 
+      transform: translateX(30px) scale(0.8); 
+    }
+    /* to */
+    100% {
+      transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fade-in {
+  /* from */
+  0% { 
+    opacity: 0;
+  }
+  /* to */
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* FONT AND COLORS */
 
@@ -216,6 +238,10 @@ h3{
   width: 400px;
 }
 
+.about-details.animate {
+  animation: fade-up 2s;
+}
+
 .about-text{
   text-align: justify;
   padding: 0 10px;
@@ -223,6 +249,11 @@ h3{
 
 .about-img{
   border-radius: 20px;
+}
+
+.about-img.animate{
+  animation: fade-in 4s;
+  transition: all 5s;
 }
 
 .contacts {
@@ -244,6 +275,7 @@ h3{
   text-align: center;
   font-size: xx-large;
   font-weight: 700;
+  animation: fade-up 0.5s;
 }
 
 .sub-title{
@@ -270,6 +302,13 @@ h3{
   align-items: center;
   scroll-margin-top: 2.5rem;
 }
+
+.projects-title{
+  text-align: center;
+}
+
+.projects-title.animate{
+  animation: slideinright 1s forwards ease}
 
 .projects-details{
   width: 1000px;

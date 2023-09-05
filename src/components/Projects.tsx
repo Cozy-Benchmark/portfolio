@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import projectsData from "../data/projectsData";
 import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
+  const titleRef = useRef<HTMLHRElement>(null);
   const [inView, setInView] = useState<string[]>([]);
+  const [titleVisibility, setTitleVisibility] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,6 +15,9 @@ const Projects = () => {
           .map((entry) => entry.target.id);
 
         setInView(inViewProjects);
+
+        const entry = entries[0];
+        setTitleVisibility(entry.isIntersecting);
       },
       {
         threshold: 0,
@@ -25,6 +30,10 @@ const Projects = () => {
         observer.observe(element);
       }
     });
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
 
     return () => {
       projectsData.forEach((project) => {
@@ -39,7 +48,12 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="projects-details">
-        <h1 className="primary-color" style={{ textAlign: "center" }}>
+        <h1
+          ref={titleRef}
+          className={`primary-color projects-title ${
+            titleVisibility ? "animate" : ""
+          }`}
+        >
           Projects
         </h1>
         {projectsData.map((item, index) => (
