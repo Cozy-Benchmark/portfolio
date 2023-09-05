@@ -5,15 +5,22 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="projects-details">
-        <h1 className='primary-color' style={{textAlign: 'center'}}>Projects</h1>
+        <h1 className="primary-color" style={{ textAlign: "center" }}>
+          Projects
+        </h1>
         {projectsData.map((item, index) => (
-          // <div className={`project-container ${index % 2 === 0 ? 'even' : 'odd'}`}>
-          <div className="project-container">
+          <div
+            className={`project-container ${index % 2 === 0 ? "even" : "odd"}`}
+          >
             <ul>
               <h2 className="project-title" id={item.id}>
                 {item.name}
               </h2>
-              <div className={`a-project-details ${index % 2 === 0 ? 'even' : 'odd'}`}>
+              <div
+                className={`a-project-details ${
+                  index % 2 === 0 ? "even" : "odd"
+                }`}
+              >
                 <div className="project-details-left">
                   <div className="description-container">
                     <h3 className="sub">Description:</h3>{" "}
@@ -23,7 +30,7 @@ const Projects = () => {
                     <h3 className="sub">Tools Used:</h3>
                     {item.toolsUsed.map((x) => (
                       <ul>
-                        <li className="body-text">{x}</li>
+                        <li className="body-text accent-color">{x}</li>
                       </ul>
                     ))}
                   </div>

@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;700&family=Varela+Round&display=swap');
 
+@keyframes slideinleft{
+  /* from */
+  0% { 
+    transform: translateX(-100%);
+  }
+
+  /* to */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideinright{
+  /* from */
+  0% { 
+    transform: translateX(100%);
+  }
+
+  /* to */
+  100% {
+    transform: translateX(0%);
+  }
+}
 
 
 /* FONT AND COLORS */
@@ -26,7 +49,6 @@ Accent: #797979
 }
 .body-text {
   font-family: 'Varela Round', sans-serif;
-  color: #797979;
 }
 
 .text-color{
@@ -252,6 +274,14 @@ h3{
 .project-container {
   width: 1000px;
   height: 100%;
+}
+
+.project-container.odd{
+  animation: 3s 1 normal slideinleft;
+}
+
+.project-container.even{
+  animation: 3s 1 normal slideinright;
 }
 
 .a-project-details {
