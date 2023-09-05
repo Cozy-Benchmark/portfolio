@@ -2,6 +2,7 @@ import projectsData from "../data/projectsData";
 import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
+  
   return (
     <div className="projects">
       <div className="projects-details">
