@@ -2,7 +2,6 @@ import projectsData from "../data/projectsData";
 import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
-  
   return (
     <div className="projects">
       <div className="projects-details">
@@ -12,6 +11,7 @@ const Projects = () => {
         {projectsData.map((item, index) => (
           <div
             className={`project-container ${index % 2 === 0 ? "even" : "odd"}`}
+            key={item.id}
           >
             <ul>
               <h2 className="project-title" id={item.id}>
@@ -29,10 +29,12 @@ const Projects = () => {
                   </div>
                   <div>
                     <h3 className="sub">Tools Used:</h3>
-                    {item.toolsUsed.map((x) => (
-                      <ul>
-                        <li className="body-text accent-color">{x}</li>
-                      </ul>
+                    {item.toolsUsed.map((item) => (
+                      <div key={item}>
+                        <ul>
+                          <li className="body-text accent-color">{item}</li>
+                        </ul>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -46,7 +48,6 @@ const Projects = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    key={item.id}
                     className="see-project-link"
                   >
                     <span>See Project</span>
