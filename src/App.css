@@ -277,11 +277,11 @@ h3{
 }
 
 .project-container.odd{
-  animation: 3s 1 normal slideinleft;
+  animation: 4s 1 normal slideinleft;
 }
 
 .project-container.even{
-  animation: 3s 1 normal slideinright;
+  animation: 4s 1 normal slideinright;
 }
 
 .a-project-details {
