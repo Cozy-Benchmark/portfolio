@@ -2,7 +2,7 @@
 
 @keyframes slideinleft{
   /* from */
-  0% { 
+  10% { 
     transform: translateX(-15%);
   }
   /* to */
@@ -13,7 +13,7 @@
 
 @keyframes slideinright{
   /* from */
-  0% { 
+  10% { 
     transform: translateX(15%);
   }
   /* to */
@@ -24,7 +24,7 @@
 
 @keyframes fade-up {
     /* from */
-    0% { 
+    10% { 
       transform: translateX(30px) scale(0.8); 
     }
     /* to */
@@ -35,7 +35,7 @@
 
 @keyframes fade-in {
   /* from */
-  0% { 
+  10% { 
     opacity: 0;
   }
   /* to */
