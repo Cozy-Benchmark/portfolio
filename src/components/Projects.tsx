@@ -1,7 +1,41 @@
+import { useEffect, useState } from "react";
 import projectsData from "../data/projectsData";
 import ImageSlider from "./ImageSlider";
 
 const Projects = () => {
+  const [inView, setInView] = useState<string[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const inViewProjects = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => entry.target.id);
+
+        setInView(inViewProjects);
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    projectsData.forEach((project) => {
+      const element = document.getElementById(project.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      projectsData.forEach((project) => {
+        const element = document.getElementById(project.id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="projects">
       <div className="projects-details">
@@ -10,51 +44,52 @@ const Projects = () => {
         </h1>
         {projectsData.map((item, index) => (
           <div
-            className={`project-container ${index % 2 === 0 ? "even" : "odd"}`}
+            className={`project-container ${index % 2 === 0 ? "even" : "odd"} ${
+              inView.includes(item.id) ? "animate" : ""
+            }`}
             key={item.id}
+            id={item.id}
           >
-            <ul>
-              <h2 className="project-title" id={item.id}>
-                {item.name}
-              </h2>
-              <div
-                className={`a-project-details ${
-                  index % 2 === 0 ? "even" : "odd"
-                }`}
-              >
-                <div className="project-details-left">
-                  <div className="description-container">
-                    <h3 className="sub">Description:</h3>{" "}
-                    <p>{item.descriptions}</p>
-                  </div>
-                  <div>
-                    <h3 className="sub">Tools Used:</h3>
-                    {item.toolsUsed.map((item) => (
-                      <div key={item}>
-                        <ul>
-                          <li className="body-text accent-color">{item}</li>
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
+            <h2 className="project-title">{item.name}</h2>
+            <div
+              className={`a-project-details ${
+                index % 2 === 0 ? "even" : "odd"
+              }`}
+            >
+              <div className="project-details-left">
+                <div className="description-container">
+                  <h3 className="sub">Description:</h3>{" "}
+                  <p>{item.descriptions}</p>
                 </div>
-                <div className="project-details-right">
-                  <div className="project-img-container">
-                    {item.images.length > 0 && (
-                      <ImageSlider slides={item.images} />
-                    )}
-                  </div>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="see-project-link"
-                  >
-                    <span>See Project</span>
-                  </a>
+                <div>
+                  <h3 className="sub">Tools Used:</h3>
+                  {item.toolsUsed.map((item) => (
+                    <div key={item}>
+                      <ul>
+                        <li className="body-text accent-color">{item}</li>
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </ul>
+              <div className="project-details-right">
+                <div className="project-img-container">
+                  {item.images.length > 0 && (
+                    <ImageSlider slides={item.images} />
+                  )}
+                </div>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`see-project-link ${
+                    index % 2 === 0 ? "even" : "odd"
+                  }`}
+                >
+                  <span>See Project</span>
+                </a>
+              </div>
+            </div>
           </div>
         ))}
       </div>
