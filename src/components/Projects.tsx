@@ -75,7 +75,7 @@ const Projects = () => {
                   <h3 className="sub">Description:</h3>{" "}
                   <p>{item.descriptions}</p>
                 </div>
-                <div>
+                <div className="tools-container">
                   <h3 className="sub">Tools Used:</h3>
                   {item.toolsUsed.map((item) => (
                     <div key={item}>
@@ -87,11 +87,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="project-details-right">
-                <div className="project-img-container">
-                  {item.images.length > 0 && (
-                    <ImageSlider slides={item.images} />
-                  )}
-                </div>
+                {item.images.length > 0 && <ImageSlider slides={item.images} />}
                 <a
                   href={item.link}
                   target="_blank"
