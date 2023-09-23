@@ -177,14 +177,12 @@ h3{
   margin-right: 35px;
   display: flex;
   width: 220px;
-  border: 1px solid red;
 }
 
 .navbar-links{
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  border: 1px solid red;
 }
 
 .navbar-hamburger-menu{
