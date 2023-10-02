@@ -12,7 +12,7 @@ const contactsData: ContactItem[] = [
   {
     id: 1,
     name: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/bryan-mendoza-717357278',
+    link: 'https://www.linkedin.com/in/bryan-benchmark',
     icon: AiOutlineLinkedin,
   },
   {
